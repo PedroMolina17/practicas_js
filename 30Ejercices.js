@@ -151,23 +151,45 @@ dos números introducidos por el usuario.
 /*
  *Palindromo por rl
  */
-const palindromo = (palabra) => {
-  const word = palabra.replace(/ /g, "").toLowerCase();
-  const cadenaReversa = word.split("").reverse().join("");
-  console.log(
-    palabra == cadenaReversa ? "Sí es palíndromo" : "No es palíndromo"
-  );
-};
+// const palindromo = (palabra) => {
+//   const word = palabra.replace(/ /g, "").toLowerCase();
+//   const cadenaReversa = word.split("").reverse().join("");
+//   console.log(
+//     palabra == cadenaReversa ? "Sí es palíndromo" : "No es palíndromo"
+//   );
+// };
 
-const obtenerPalabra = async () => {
-  return rl.question("Escribe una palabra: ");
-};
+// const obtenerPalabra = async () => {
+//   return rl.question("Escribe una palabra: ");
+// };
 
-const verificarPalindromo = async () => {
-  const palabra = await obtenerPalabra();
-  palindromo(palabra);
-};
+// const verificarPalindromo = async () => {
+//   const palabra = await obtenerPalabra();
+//   palindromo(palabra);
+// };
 
-verificarPalindromo();
+// verificarPalindromo();
 
-/** */
+/*
+ *Verificar  si un numero es primo
+  
+ */
+// const primo = (x) => {
+//   if (x <= 1) return false;
+//   console.log(x);
+//   for (let i = 2; i <= Math.sqrt(x); i++) {
+//     if (x % i === 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+
+// console.log(primo(8));
+
+function countItems(x) {
+  return x.toString().length;
+}
+
+console.log(countItems(19000));
+console.log(countItems("Hola mundo"));

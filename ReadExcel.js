@@ -12,7 +12,6 @@ const data = [];
 for (let row = range.s.r + 1; row <= range.e.r; row++) {
   const rowData = [];
 
-  // Recorrer las celdas en cada fila
   for (let col = range.s.c; col <= range.e.c; col++) {
     const cellAddress = { r: row, c: col };
     console.log(cellAddress);
@@ -32,7 +31,6 @@ console.log(emails);
 const newWorkbook = XLSX.utils.book_new();
 const newWorksheet = XLSX.utils.json_to_sheet(emails);
 
-// Añadir la hoja de cálculo al nuevo libro
 XLSX.utils.book_append_sheet(newWorkbook, newWorksheet, "Emails");
 
 const archivoSalida = "./LibroEmail.xlsx";
